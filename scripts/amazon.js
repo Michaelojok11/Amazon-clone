@@ -124,12 +124,16 @@ products.forEach(
             Added
           </div>
 
-          <button class="add-to-cart-button button-primary">
+          <button class="add-to-cart-button button-primary js-add-to-cart">
             Add to Cart
           </button>
         </div>
 
         `;
+
+        // In the Add to button above, we added an event listener, we started by adding the javascript class
+        // The event listener has been added through the DOM
+        // 
         
     });
     // step 3
@@ -146,3 +150,12 @@ products.forEach(
     document.querySelector('.js-products-grid').innerHTML = productsHTML;
     // using toFixed changes it to 2 decinmal places 
     
+    // 
+    // Make it interactive
+    document.querySelectorAll('.js-add-to-cart')
+    .forEach((button) => {
+        button.addEventListener('click',( => {
+            console.log('Added product');
+        }));
+
+    })
