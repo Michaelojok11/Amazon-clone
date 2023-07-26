@@ -36,9 +36,19 @@ const products = [{
         count: 56,
     },
     priceCents: 799    
-}, {
-    
-}
+}, 
+
+{
+    // third product
+    image:'images/products/black-2-slot-toaster.jpg',
+    name: 'Adults Plain Cotton T-Shirt - 2 Pack',
+    rating: {
+        stars: 4,
+        count: 56,
+    },
+    priceCents: 799    
+}, 
+
 ];
 // End of saving the data
 
