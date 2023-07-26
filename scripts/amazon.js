@@ -36,6 +36,8 @@ const products = [{
         count: 56,
     },
     priceCents: 799    
+}, {
+    
 }
 ];
 // End of saving the data
