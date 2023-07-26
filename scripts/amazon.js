@@ -40,6 +40,17 @@ const products = [{
 ];
 // End of saving the data
 
+// step 3- step 2 is below step 3, combine all the HTML in one 
+let productsHTML = ''; 
+
+// EACH TIME we go through the loop we will add the HTML up there
+
+
+
+
+
+
+
 // Step 2, use the data to generate the HTML
 // To generate the HTML, We can loop through the arrays to create HTML for each of the products
 // 
@@ -48,10 +59,15 @@ const products = [{
 // Looping through the array
 products.forEach(
     // create a function here. for each takes each product and saves it in a parameter called product, then runs the function
+    
+    // updated from step 3 now
+    // updated from step 3- accumulator pattern.
+    // Each time we loop through, we add to the products
+
     (product) => {
         // for each of these products we want to create some HTML
         // Therefore we create a variable and we use a template string using back ticks
-        const html = `
+        productsHTML += `
         <div class="product-container">
           <div class="product-image-container">
             <img class="product-image"
@@ -71,7 +87,7 @@ products.forEach(
           </div>
 
           <div class="product-price">
-            $${product.priceCents / 100}
+              $${(product.priceCents / 100).toFixed(2)}
           </div>
 
           <div class="product-quantity-container">
@@ -102,9 +118,19 @@ products.forEach(
         </div>
 
         `;
-        console.log(html);
+        
     });
+    // step 3
+    console.log(productsHTML);
 
 
+    // step 3 - it is done right below step 1
     // Combine all the HTML into one and put it on the webpage
     // 
+
+    // last step is to put it on the webpage using the DOM 
+    // To achieve that we have to add a class to the HTML element (js- product grid)
+    
+    document.querySelector('.js-products-grid').innerHTML = productsHTML;
+    // using toFixed changes it to 2 decinmal places 
+    
