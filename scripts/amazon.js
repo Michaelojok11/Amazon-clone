@@ -124,7 +124,9 @@ products.forEach(
             Added
           </div>
 
-          <button class="add-to-cart-button button-primary js-add-to-cart">
+          <button class="add-to-cart-button button-primary js-add-to-cart"
+          data-product-name="${product.name}"
+          >
             Add to Cart
           </button>
         </div>
@@ -151,11 +153,23 @@ products.forEach(
     // using toFixed changes it to 2 decinmal places 
     
     // 
-    // Make it interactive
+    // Make it interactive 
+
     document.querySelectorAll('.js-add-to-cart')
     .forEach((button) => {
-        button.addEventListener('click',( => {
-            console.log('Added product');
-        }));
-
+        button.addEventListener('click', ()=>{
+        //   we can add an object to the cart
+        //  We can use a data attribute (It allows us to atach any information to an element)
+        //  The data attribute can start with data and we can give it anyname that we like
+        // 
+        console.log(button.dataset);
+        
+        });
     })
+
+// We can add the product to the cart
+// we can create a cart array
+
+
+
+
