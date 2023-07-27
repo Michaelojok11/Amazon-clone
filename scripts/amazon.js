@@ -182,7 +182,19 @@ products.forEach(
                     quantity: 1
                 });
             }  
-              
+            // we need a variable to store the quantity
+
+            let cartQuantity = 0;
+
+
+
+            cart.forEach((item) => {
+                cartQuantity += item.quantity;
+
+            });
+
+        console.log(cartQuantity);
+
         console.log(cart);
 
         });
@@ -195,3 +207,10 @@ products.forEach(
 
 // We can add the product to the cart
 // we can create a cart array
+
+// steps
+/*
+1. calculate the quantity
+2. put that quantity on the page
+3. 
+*/
