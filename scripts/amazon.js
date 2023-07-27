@@ -162,10 +162,24 @@ products.forEach(
         //  We can use a data attribute (It allows us to atach any information to an element)
         //  The data attribute can start with data and we can give it anyname that we like
         // 
-        console.log(button.dataset.productName);
+        const productName = button.dataset.
+        productName;
+        
+
+
+
+
+
+        cart.push({
+            productName: productName,
+            quantity: 1,
+        });
+
+        console.log(cart);
 
         });
-    })
+    });
+
 
 // We can add the product to the cart
 // we can create a cart array
