@@ -164,16 +164,25 @@ products.forEach(
         // 
         const productName = button.dataset.
         productName;
-        
+
+        let matchingItem;
 
 
+        cart.forEach((item) => {
+            if (productName === item.productName){
+                matchingItem = item;             
+            }
+            });
 
+            if (matchingItem){
+                matchingItem.quantity += 1;
+            } else {
+                cart.push({
+                    productName: productName,
+                    quantity: 1,
+                });
+            }    
 
-
-        cart.push({
-            productName: productName,
-            quantity: 1,
-        });
 
         console.log(cart);
 
