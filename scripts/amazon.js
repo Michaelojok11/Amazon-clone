@@ -179,10 +179,9 @@ products.forEach(
             } else {
                 cart.push({
                     productName: productName,
-                    quantity: 1,
+                    quantity: 1
                 });
             }    
-
 
         console.log(cart);
 
