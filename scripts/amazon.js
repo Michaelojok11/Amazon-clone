@@ -103,7 +103,7 @@ products.forEach(
           </div>
 
           <div class="product-quantity-container">
-            <select>
+          <select class="js-quantity-selector-${product.id}">
               <option selected value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -174,6 +174,18 @@ products.forEach(
             }
             });
 
+            // When clicking the 'Add to Cart' button , use the DOM to get the quantity
+            // selector
+
+            const quantitySelector = document.querySelector( `.js-quantity-selector-${productId}`);
+
+            // Get the value selected in the quantity selector (to get the value out of a select element using the property value)
+            const quantity = quantitySelector.value;
+
+            // When updating the cart, instead of using a quantity of 1 everytime, use the quantity that we got from 13d.
+            // 
+
+
             if (matchingItem){
                 matchingItem.quantity += 1;
             } else {
@@ -185,8 +197,6 @@ products.forEach(
             // we need a variable to store the quantity
 
             let cartQuantity = 0;
-
-
 
             cart.forEach((item) => {
                 cartQuantity += item.quantity;
